@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcfax0aeepe3q"]
+
+[ext_resource type="Script" path="res://button-title-play.gd" id="1_gc6ya"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(1, 0, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 273.0
+rotation = 0.0680678
+theme_override_colors/font_color = Color(0.254902, 0.47451, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 6
+theme_override_font_sizes/font_size = 120
+text = "Car Therapy"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-title-play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 350.0
+offset_right = 751.0
+offset_bottom = 476.0
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.180392, 0.411765, 1, 1)
+theme_override_font_sizes/font_size = 63
+text = "PLAY"
+flat = true
+script = ExtResource("1_gc6ya")
+
+[connection signal="pressed" from="button-title-play" to="button-title-play" method="_on_buttontitleplay_pressed"]

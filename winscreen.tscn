@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://b27018rtgsxq5"]
+
+[ext_resource type="Script" path="res://button-exit.gd" id="1_mndfe"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.254902, 0.47451, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 359.0
+rotation = -0.0645772
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 6
+theme_override_font_sizes/font_size = 120
+text = "You Win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="button-exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 319.0
+offset_right = 761.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 63
+text = "PLAY AGAIN"
+flat = true
+script = ExtResource("1_mndfe")
+
+[connection signal="pressed" from="button-exit" to="button-exit" method="_on_pressed"]
